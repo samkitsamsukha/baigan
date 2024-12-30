@@ -1,101 +1,197 @@
-import Image from "next/image";
+import React from "react";
+import {
+  ArrowBigUp,
+	Blocks,
+	Box,
+	BriefcaseBusiness,
+	Building,
+	Building2,
+	Clock,
+	GlobeLock,
+	IndianRupee,
+	Siren,
+	Wallet,
+} from "lucide-react";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+	return (
+		<div className="bg-gray-950 text-gray-200 min-h-screen mt-16">
+			{/* Hero Section */}
+			<header className="py-20 text-center">
+				<h1 className="text-5xl font-bold text-yellow-400">
+					Violence Detection AI
+				</h1>
+				<p className="mt-4 text-lg text-gray-200">
+					Machine Learning powered CCTV monitoring to detect and alert about
+					violent activities in real time.
+				</p>
+				<button className="mt-6 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-300">
+					Get Started
+				</button>
+			</header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+			{/* Features Section */}
+			<section className="py-20 px-8 md:px-16">
+				<h2 className="text-4xl font-bold text-center text-yellow-400">
+					Features
+				</h2>
+				<div className="mt-12 grid gap-8 md:grid-cols-3">
+					<div className="bg-gray-900 p-6 rounded-lg">
+            <div className="flex items-center gap-2">
+							<i className="lucide lucide-briefcase text-yellow-400 text-2xl">
+								<Clock />
+							</i>
+							<h3 className="text-2xl font-semibold text-yellow-400">Real-Time Alerts</h3>
+						</div>
+						<p className="mt-4 text-gray-200">
+							Get instant notifications for any violent activity detected on
+							screen.
+						</p>
+					</div>
+					<div className="bg-gray-900 p-6 rounded-lg">
+          <div className="flex items-center gap-2">
+							<i className="lucide lucide-briefcase text-yellow-400 text-2xl">
+              <ArrowBigUp />
+							</i>
+							<h3 className="text-2xl font-semibold text-yellow-400">High Accuracy</h3>
+						</div>
+						<p className="mt-4 text-gray-200">
+							Trained with advanced ML models to minimize false positives.
+						</p>
+					</div>
+					<div className="bg-gray-900 p-6 rounded-lg">
+          <div className="flex items-center gap-2">
+							<i className="lucide lucide-briefcase text-yellow-400 text-2xl">
+								<Blocks />
+							</i>
+							<h3 className="text-2xl font-semibold text-yellow-400">Easy Integration</h3>
+						</div>
+						<p className="mt-4 text-gray-200">
+							Seamlessly integrate with your existing CCTV setup.
+						</p>
+					</div>
+					<div className="bg-gray-900 p-6 rounded-lg">
+          <div className="flex items-center gap-2">
+							<i className="lucide lucide-briefcase text-yellow-400 text-2xl">
+              <GlobeLock />
+							</i>
+							<h3 className="text-2xl font-semibold text-yellow-400">Blockchain Based Report Filing</h3>
+						</div>
+						<p className="mt-4 text-gray-200">
+							Absolutely authentic and reliable report filing using Ether as gas
+							fee.
+						</p>
+					</div>
+					<div className="bg-gray-900 p-6 rounded-lg">
+          <div className="flex items-center gap-2">
+							<i className="lucide lucide-briefcase text-yellow-400 text-2xl">
+								<Siren />
+							</i>
+							<h3 className="text-2xl font-semibold text-yellow-400">Nearest Police Station</h3>
+						</div>
+						<p className="mt-4 text-gray-200">
+							Finds and alert the nearest police station in case any anomaly is
+							detected.
+						</p>
+					</div>
+					<div className="bg-gray-900 p-6 rounded-lg">
+          <div className="flex items-center gap-2">
+							<i className="lucide lucide-briefcase text-yellow-400 text-2xl">
+								<Clock />
+							</i>
+							<h3 className="text-2xl font-semibold text-yellow-400">Real-Time Alerts</h3>
+						</div>  
+						<p className="mt-4 text-gray-200">
+							Seamlessly integrate with your existing CCTV setup.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			{/* Pricing Section */}
+			<section className="py-20 px-8 md:px-16 bg-gray-900">
+				<div className="flex items-center gap-2 justify-center">
+					<i className="lucide lucide-box text-yellow-400 text-4xl font-bold">
+						<Wallet size={30} />
+					</i>
+					<h3 className="text-4xl font-bold text-center text-yellow-400">
+						Pricing
+					</h3>
+				</div>
+				<div className="mt-12 grid gap-8 md:grid-cols-3">
+					{/* Basic Plan */}
+					<div className="bg-gray-950 p-6 rounded-lg border border-gray-700">
+						<div className="flex items-center gap-2">
+							<i className="lucide lucide-box text-yellow-400 text-2xl">
+								<Box />
+							</i>
+							<h3 className="text-2xl font-semibold text-yellow-400">Basic</h3>
+						</div>
+						<p className="mt-4 text-gray-200">For small setups</p>
+						<ul className="mt-4 text-gray-200 list-disc list-inside">
+							<li>1 GB storage</li>
+							<li>Email support</li>
+							<li>Access to basic features</li>
+						</ul>
+						<p className="mt-6 text-gray-200 text-sm">Validity: 1 month</p>
+						<p className="mt-2 text-3xl font-bold text-gray-200">$19/mo</p>
+						<button className="mt-6 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-300">
+							Subscribe
+						</button>
+					</div>
+
+					{/* Pro Plan */}
+					<div className="bg-gray-950 p-6 rounded-lg border border-gray-700">
+						<div className="flex items-center gap-2">
+							<i className="lucide lucide-briefcase text-yellow-400 text-2xl">
+								<BriefcaseBusiness />
+							</i>
+							<h3 className="text-2xl font-semibold text-yellow-400">Pro</h3>
+						</div>
+						<p className="mt-4 text-gray-200">For medium businesses</p>
+						<ul className="mt-4 text-gray-200 list-disc list-inside">
+							<li>10 GB storage</li>
+							<li>Priority email support</li>
+							<li>Advanced analytics</li>
+						</ul>
+						<p className="mt-6 text-gray-200 text-sm">Validity: 3 months</p>
+						<p className="mt-2 text-3xl font-bold text-gray-200">$49/mo</p>
+						<button className="mt-6 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-300">
+							Subscribe
+						</button>
+					</div>
+
+					{/* Enterprise Plan */}
+					<div className="bg-gray-950 p-6 rounded-lg border border-gray-700">
+						<div className="flex items-center gap-2">
+							<i className="lucide lucide-building text-yellow-400 text-2xl">
+								<Building2 />
+							</i>
+							<h3 className="text-2xl font-semibold text-yellow-400">
+								Enterprise
+							</h3>
+						</div>
+						<p className="mt-4 text-gray-200">Custom solutions</p>
+						<ul className="mt-4 text-gray-200 list-disc list-inside">
+							<li>Unlimited storage</li>
+							<li>Dedicated account manager</li>
+							<li>Custom integrations</li>
+						</ul>
+						<p className="mt-6 text-gray-200 text-sm">Validity: Custom</p>
+						<p className="mt-2 text-3xl font-bold text-gray-200">Contact Us</p>
+						<button className="mt-6 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-300">
+							Contact
+						</button>
+					</div>
+				</div>
+			</section>
+
+			{/* Footer */}
+			<footer className="py-4 text-center bg-gray-950">
+				<p className="text-gray-400">
+					&copy; 2024 BAIGAN. All Rights Reserved.
+				</p>
+			</footer>
+		</div>
+	);
 }
