@@ -4,11 +4,9 @@ import {
 	Blocks,
 	Box,
 	BriefcaseBusiness,
-	Building,
 	Building2,
 	Clock,
 	GlobeLock,
-	IndianRupee,
 	Siren,
 	Wallet,
 } from "lucide-react";
