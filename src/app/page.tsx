@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import {
 	ArrowBigUp,
@@ -10,6 +12,7 @@ import {
 	Siren,
 	Wallet,
 } from "lucide-react";
+import { redirect } from "next/navigation";
 
 export default function Home() {
 	return (
@@ -54,7 +57,7 @@ export default function Home() {
 						className="rounded-xl w-full h-[300px] object-cover"
 					></video>
 				</div>
-		np	</div>
+			</div>
 			<section className="py-20 px-8 md:px-16">
 				<h2 className="text-4xl font-bold text-center text-yellow-400">
 					Features
@@ -155,8 +158,8 @@ export default function Home() {
 							<li>Access to basic features</li>
 						</ul>
 						<p className="mt-6 text-gray-200 text-sm">Validity: 1 month</p>
-						<p className="mt-2 text-3xl font-bold text-gray-200">$19/mo</p>
-						<button className="mt-6 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-300">
+						<p className="mt-2 text-3xl font-bold text-gray-200">Rs. 2999/mo</p>
+						<button onClick={() => redirect('https://rzp.io/rzp/mQVO5LhG')} className="mt-6 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-300">
 							Subscribe
 						</button>
 					</div>
@@ -174,8 +177,8 @@ export default function Home() {
 							<li>Advanced analytics</li>
 						</ul>
 						<p className="mt-6 text-gray-200 text-sm">Validity: 3 months</p>
-						<p className="mt-2 text-3xl font-bold text-gray-200">$49/mo</p>
-						<button className="mt-6 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-300">
+						<p className="mt-2 text-3xl font-bold text-gray-200">Rs. 5999/mo</p>
+						<button onClick={() => redirect('https://rzp.io/rzp/mQVO5LhG')} className="mt-6 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-300">
 							Subscribe
 						</button>
 					</div>
@@ -200,6 +203,37 @@ export default function Home() {
 							Contact
 						</button>
 					</div>
+				</div>
+			</section>
+			<section className="bg-gray-900 py-12">
+				<div className="container mx-auto text-center">
+					<h2 className="text-yellow-400 text-3xl font-bold mb-4">Contact Us</h2>
+					<p className="text-gray-200 text-lg mb-6">
+						We'd love to hear from you! Reach out to us for any inquiries or feedback.
+					</p>
+					<form className="max-w-md mx-auto">
+						<input
+							type="text"
+							placeholder="Your Name"
+							className="w-full p-3 mb-4 rounded bg-gray-800 text-gray-200 border border-gray-700 focus:outline-none focus:ring focus:ring-yellow-400"
+						/>
+						<input
+							type="email"
+							placeholder="Your Email"
+							className="w-full p-3 mb-4 rounded bg-gray-800 text-gray-200 border border-gray-700 focus:outline-none focus:ring focus:ring-yellow-400"
+						/>
+						<textarea
+							placeholder="Your Message"
+							rows="5"
+							className="w-full p-3 mb-4 rounded bg-gray-800 text-gray-200 border border-gray-700 focus:outline-none focus:ring focus:ring-yellow-400"
+						></textarea>
+						<button
+							type="submit"
+							className="w-full bg-yellow-400 text-gray-900 font-bold py-3 rounded hover:bg-yellow-300 transition duration-300"
+						>
+							Send Message
+						</button>
+					</form>
 				</div>
 			</section>
 			<footer className="py-4 text-center bg-gray-950">
