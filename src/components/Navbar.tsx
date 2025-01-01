@@ -19,7 +19,7 @@ const Navbar = () => {
 				</h1>
 
 				{/* Navigation Links */}
-				<ul className="flex space-x-6 text-gray-200">
+				<ul className="flex space-x-6 text-gray-200 z-10">
 					<li>
 						<button onClick={()=>{router.push('/report')}} className="hover:text-yellow-400 hover:bg-gray-900 px-2 py-1 rounded-md duration-200 transition-all">
 							Report Anomaly

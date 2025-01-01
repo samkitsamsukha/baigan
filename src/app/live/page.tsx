@@ -34,7 +34,7 @@ const LivePage = () => {
     }, []);
 
     return (
-        <div className="relative flex justify-center items-center min-h-screen mx-36">
+        <div className="relative flex justify-center items-center min-h-screen mx-36 my-16 overflow-clip">
             {/* Date, Time, and Location */}
             <div className="fixed top-16 left-4 p-4 text-gray-200 font-semibold rounded-bl-lg">
                 {location}
