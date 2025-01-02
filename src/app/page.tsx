@@ -41,7 +41,7 @@ export default function Home() {
 				</div>
 				<div className="md:w-1/3 bg-gray-800 rounded-xl p-1">
 					<video
-						src="/report.mp4"
+						src="/vids.mp4"
 						autoPlay
 						loop
 						muted
