@@ -116,43 +116,16 @@ const ReportForm = () => {
 	};
 
 	const submitForm = async () => {
-		if (!window.ethereum) {
-			alert("MetaMask is not installed. Please install MetaMask to proceed.");
-			return;
-		}
-
-		try {
-			setIsSubmitting(true);
-
-			// MetaMask Transaction
-			const web3 = new Web3(window.ethereum);
-			await window.ethereum.request({ method: "eth_requestAccounts" });
-			const accounts = await web3.eth.getAccounts();
-
-			const gasFee = web3.utils.toWei("0.001", "ether"); // Example gas fee
-
-			const tx = {
-				from: accounts[0],
-				to: "0xC7584fDDa402C2908AF794Cea82543bdAc8A64b7", // Replace with your contract address
-				value: gasFee,
-				gas: 21000,
-			};
-
-			await web3.eth.sendTransaction(tx);
+		
+		
 
 			// Generate PDF after successful transaction
 			const pdfData = generatePDF();
-			window.open(pdfData); // Open the PDF in a new tab
+			window.open(pdfData);
 
 			toast.success(
 				"Complaint submitted successfully. Thank you for reporting."
 			);
-		} catch (error) {
-			console.error("Error submitting form:", error);
-			toast.error("Failed to submit complaint. Please try again.");
-		} finally {
-			setIsSubmitting(false);
-		}
 	};
 
 	const handleSubmit = (e) => {
